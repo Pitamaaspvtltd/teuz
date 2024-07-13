@@ -1,0 +1,19 @@
+.flex {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+@media(max-width:1350px) {
+  .flex {
+    flex-direction: column;
+  }
+}
+
+@media(max-width:850px) {
+  .flex {
+    flex-direction: column;
+    width: 99%;
+  }
+}

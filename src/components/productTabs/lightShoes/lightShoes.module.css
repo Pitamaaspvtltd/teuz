@@ -1,0 +1,58 @@
+.banner {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.banner h1 {
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 36px;
+}
+
+.fashion02 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fashion02 img {
+  width: 100%;
+}
+
+.fashion02 div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.fashion02 div p {
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 1.4px;
+}
+
+@media(max-width:800px) {
+  .banner {
+    width: 99%;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .banner h1 {
+
+    font-size: 30px;
+  }
+
+  .fashion02 div p {
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 1.4px;
+  }
+
+}

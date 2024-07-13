@@ -1,0 +1,342 @@
+.container {
+  overflow: hidden;
+}
+
+.header img {
+  width: 100%;
+  margin-top: -80px;
+}
+
+.collections {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.collections h1 {
+  font-weight: 400;
+  letter-spacing: 1.8px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.homeCollection {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+}
+
+.homeCollection::-webkit-scrollbar {
+  /* display: none; */
+  /* Chrome, Safari, Opera */
+}
+
+.homeCollection div img {
+  width: 120px;
+}
+
+.collections p {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.homeCollection div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 1100px) {
+  .homeCollection {
+    flex-wrap: nowrap;
+    /* Ensure items do not wrap to the next line */
+  }
+
+  .homeCollection div {
+    min-width: 130px;
+    /* Adjust to fit content appropriately */
+    margin-right: 10px;
+    /* Add space between items */
+  }
+}
+
+@media (max-width: 600px) {
+  .homeCollection div img {
+    width: 100px;
+  }
+
+  .homeCollection div {
+    min-width: 115px;
+  }
+
+  .collections p {
+    font-size: 13.5px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+}
+
+/* ==========================shoesGrid================ */
+
+.shoesGrid {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  gap: 0;
+  justify-content: space-between;
+  padding: 100px;
+}
+
+.shoeGrid1 {
+  background: #E7FFFB;
+}
+
+.shoeGrid2 {
+  background: #E7FFED;
+}
+
+.shoeGrid3 {
+  background: #FFFFE7;
+}
+
+.shoeGrid4 {
+  background: #FFE7E7;
+}
+
+
+
+.rightShoeGrid {
+  /* width: 50%; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: auto;
+}
+
+.rightShoeGrid img {
+  width: 250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  width: 75%;
+}
+
+.rightShoeGrid .shoeGrid5 {
+  padding: 0;
+  cursor: pointer;
+  /* margin-left: 20px; */
+}
+
+.leftShoeGrid {
+  /* width: 50%; */
+  cursor: pointer;
+}
+
+.leftShoeGrid img {
+  padding: 50px;
+  width: 80%;
+}
+
+/* =============================homeBanner============ */
+.banner img {
+  width: 100%;
+}
+
+/* =======================trendingShoes================= */
+
+.trendingShoes {
+  margin-top: 50px;
+}
+
+.trendingShoes h1 {
+  font-weight: 400;
+  margin-left: 40px;
+  letter-spacing: 3px;
+  font-size: 38px;
+}
+
+.trendingShoes div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  row-gap: 25px;
+  place-items: center;
+  padding: 25px;
+}
+
+.trendingShoes div img {
+  background: #F4F4F4;
+  padding: 15px;
+  width: 150px;
+}
+
+
+/* =======================homebanner2================= */
+.homebanner2 {
+  margin-top: 80px;
+}
+
+.homebanner2 img {
+  width: 100%;
+}
+
+/* ===============about============================ */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 10px;
+  padding: 0 30px;
+}
+
+.about h1 {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.about p {
+  width: 86%;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+@media(max-width:1350px) {
+  .trendingShoes div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    gap: 10px;
+    row-gap: 25px;
+    place-items: center;
+    padding: 25px;
+  }
+}
+
+@media(max-width:1250px) {
+  .header img {
+    width: 100%;
+    margin-top: 11vh;
+  }
+
+}
+
+@media(max-width:1000px) {
+  .shoesGrid {
+    width: 100%;
+    padding: 100px 20px;
+  }
+}
+
+@media(max-width:800px) {
+  .shoesGrid {
+    gap: 20px;
+  }
+
+  .rightShoeGrid {
+
+    gap: 20px;
+    margin: auto;
+  }
+
+  .rightShoeGrid img {
+
+    width: 100%;
+  }
+
+  .leftShoeGrid img {
+    padding: 50px;
+    width: 100%;
+  }
+
+  .about p {
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 1.4px;
+    line-height: 1.4;
+    text-align: justify;
+  }
+}
+
+@media(max-width:600px) {
+  .collections {
+    padding: 20px 0px;
+    margin-top: 10px;
+  }
+
+
+  .collections h1 {
+    font-size: 24px;
+    letter-spacing: 1.4px;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .trendingShoes h1 {
+    margin-left: 0px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .trendingShoes div {
+    width: 100%;
+
+    gap: 10px;
+    row-gap: 25px;
+    place-items: center;
+    padding: 25px 10px;
+  }
+
+  .shoesGrid {
+    width: 100%;
+    padding: 60px 20px;
+    flex-direction: column;
+  }
+
+  .leftShoeGrid img {
+    padding: 20px;
+
+  }
+
+  .rightShoeGrid img {
+    padding: 10px;
+  }
+
+  .about h1 {
+    font-weight: 300;
+    letter-spacing: 1.6px;
+    font-size: 26px;
+  }
+
+  .about {
+    padding: 0 15px;
+  }
+
+  .about p {
+    font-size: 16px;
+    letter-spacing: 1.4px;
+    line-height: 1.4;
+    text-align: justify;
+  }
+}

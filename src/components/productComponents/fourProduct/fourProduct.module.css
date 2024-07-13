@@ -1,0 +1,262 @@
+.components {
+  width: 90%;
+  margin: auto;
+
+}
+
+.components h1 {
+  text-align: center;
+  margin: 26px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 36px;
+}
+
+.shoeContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center;
+  row-gap: 50px;
+  margin: auto;
+}
+
+.shoes {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.shoes div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 6px;
+}
+
+.shoes div p {
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1.4px;
+}
+
+.shoes img {
+  width: 260px;
+  padding: 20px;
+}
+
+/* Add this to your CSS file */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ReactModal__Content {
+  position: absolute;
+  width: 100%;
+  max-width: 800px;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  /* margin-right: -50%; */
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.openImage {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  position: relative;
+}
+
+.opencontent {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.openLeft {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.opencontent p {
+  font-size: 26px;
+}
+
+.openImage img {
+  width: 450px;
+}
+
+.openImage button {
+  font-size: 40px;
+  border: 1px solid #000;
+  padding: 0;
+  color: rgb(95, 94, 94);
+  position: absolute;
+  right: -10px;
+  top: -10px;
+
+}
+
+/* Media query for small screens */
+
+@media (max-width: 1000px) {
+  .ReactModal__Content {
+    position: absolute;
+    width: 100%;
+    max-width: 800px;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    /* margin-right: -50%; */
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: auto;
+  }
+
+  .openImage img {
+    width: 350px;
+  }
+
+  .openLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+
+  .opencontent {
+    flex-direction: row;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .ReactModal__Content {
+    width: 95%;
+    padding: 10px;
+  }
+}
+
+/* .shoeContainer img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+} */
+
+@media(max-width:1350px) {
+  .components {
+    width: 95%;
+    margin: auto;
+
+  }
+}
+
+@media(max-width:700px) {
+  .components {
+    width: 99%;
+    margin: auto;
+
+  }
+
+  .shoeContainer {
+    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+
+  }
+
+  .shoes img {
+    width: 200px;
+    padding: 10px;
+  }
+
+  .shoes div p {
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: normal;
+  }
+
+  .shoes div {
+
+    margin: 0 2px;
+  }
+
+  .openImage img {
+    width: 300px;
+  }
+
+
+  .opencontent p {
+    font-size: 22px;
+  }
+
+  .openImage button {
+    font-size: 30px;
+  }
+}
+
+@media(max-width:500px) {
+  .shoeContainer {
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    row-gap: 30px;
+
+  }
+
+  .shoes img {
+    width: 170px;
+    padding: 05px;
+  }
+
+  .components h1 {
+    font-size: 22px;
+  }
+
+  .openImage img {
+    width: 260px;
+  }
+
+
+  .opencontent p {
+    font-size: 18px;
+  }
+
+  .openImage button {
+    font-size: 30px;
+    right: -20px;
+    top: -20px;
+  }
+}
+
+@media(max-width:390px) {
+  .shoeContainer {
+    grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+    row-gap: 30px;
+
+  }
+
+  .openImage img {
+    width: 240px;
+  }
+
+  .shoes img {
+    width: 160px;
+    padding: 5px;
+  }
+
+  .opencontent p {
+    font-size: 17px;
+  }
+
+
+}

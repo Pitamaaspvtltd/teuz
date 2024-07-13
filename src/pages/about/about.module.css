@@ -1,0 +1,184 @@
+.container {
+  overflow: hidden;
+}
+
+.landing img {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.aboutContainer {
+  display: flex;
+  width: 92%;
+  margin: auto;
+  gap: 100px;
+}
+
+.shoesImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+.shoesImage img {
+  z-index: 5;
+}
+
+.shoesImage img:first-child {
+  width: 100%;
+}
+
+.shoesImage img:nth-child(2) {
+  width: 120px;
+  margin-top: 8px;
+}
+
+.shoesImage img:nth-child(3) {
+  width: 100px;
+}
+
+.shoesImage img:nth-child(4) {
+  width: 80px;
+}
+
+.shoesImage hr {
+  background: #FFE0E0;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  width: 35px;
+  /* margin-top: 5px; */
+  outline: 0;
+  border: 0;
+  border-radius: 10px;
+  padding: 20px 0;
+}
+
+.brand {
+  font-weight: 300;
+  font-size: 40px;
+  width: 92%;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.content p {
+  font-size: 18px;
+  letter-spacing: 1.6px;
+  line-height: 1.5;
+  text-align: justify;
+  font-weight: 300;
+}
+
+.founders {
+  background: #FEFFE0;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 100px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.founders h2 {
+  font-size: 26px;
+  letter-spacing: 1.6px;
+  font-weight: 300;
+}
+
+.founders h1 {
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: 1.6px;
+}
+
+.founders ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.founders ul li {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media(max-width:1200px) {
+  .landing img {
+    margin-top: 11vh;
+  }
+}
+
+@media(max-width:1000px) {
+  .aboutContainer {
+    width: 95%;
+    gap: 50px;
+  }
+
+  .brand {
+    width: 95%;
+  }
+
+  .founders {
+    padding: 30px 20px;
+  }
+
+  .founders h2 {
+    font-size: 24px;
+    letter-spacing: 1.5px;
+  }
+
+  .founders h1 {
+    font-size: 30px;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media(max-width:700px) {
+  .aboutContainer {
+    flex-direction: column-reverse;
+    width: 92%;
+  }
+
+  .brand {
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    margin: 0;
+    letter-spacing: 4px;
+    font-size: 36px;
+  }
+
+  .content p {
+    font-size: 17px;
+    letter-spacing: 1.5px;
+  }
+
+  .founders {
+    padding: 30px 30px;
+    flex-direction: column;
+    /* align-items: start; */
+    gap: 30px;
+  }
+
+  .founders div {
+    text-align: center;
+  }
+
+  .founders ul {
+    text-align: center;
+    gap: 15px;
+  }
+
+  .founders h2 {
+    font-size: 22px;
+    letter-spacing: 1.5px;
+  }
+
+  .founders h1 {
+    font-size: 26px;
+    letter-spacing: 3px;
+  }
+}

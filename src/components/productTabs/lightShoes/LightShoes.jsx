@@ -1,0 +1,286 @@
+import styles from "./lightShoes.module.css"
+import FourProduct from "../../productComponents/fourProduct/FourProduct"
+import {
+	BMW01,
+	BMW02,
+	assets,
+	fashion01,
+	fashion03,
+	fashion04,
+	fashion05,
+	ferrari01,
+	ferrari02,
+	glitter01,
+	hellokitty,
+	hike01,
+	jordan01,
+	jordan05,
+	jordan06,
+	jordan07,
+	jugnu01,
+	jugnu02,
+	jugnu03,
+	jugnu04,
+	jugnu05,
+	jugnu06,
+	jugnu07,
+	light08,
+	light09,
+	light12,
+	light13,
+	priyanka01,
+} from "../../../assets/assets"
+import ThreeProduct from "../../productComponents/threeProduct/ThreeProduct"
+import TwoProduct from "../../productComponents/twoProduct/TwoProduct"
+import { FiveProducts } from "../../productComponents/fiveProducts/FiveProducts"
+
+const LightShoes = () => {
+	return (
+		<div className="all-products-flex-gap">
+			{/* <FourProduct
+				title={"Light-13"}
+				shoes={light13}
+			/>
+			<FourProduct
+				title={"Light-12"}
+				shoes={light12}
+			/>
+			<ThreeProduct
+				title={"Light-09"}
+				shoes={light09}
+			/>
+			<FourProduct
+				title={"Light-08"}
+				shoes={light08}
+			/>
+			<ThreeProduct
+				title={"Jugnu-07"}
+				shoes={jugnu07}
+			/>
+			<TwoProduct
+				title={"Jugnu-06"}
+				shoes={jugnu06}
+			/>
+			<FourProduct
+				title={"Jugnu-05"}
+				shoes={jugnu05}
+			/>
+			<FourProduct
+				title={"Jugnu-04"}
+				shoes={jugnu04}
+			/>{" "}
+			<FourProduct
+				title={"Jugnu-03"}
+				shoes={jugnu03}
+			/>
+			<FourProduct
+				title={"Jugnu-02"}
+				shoes={jugnu02}
+			/>
+			<FourProduct
+				title={"Jugnu-01"}
+				shoes={jugnu01}
+			/>
+			<ThreeProduct
+				title={"Jordan-07"}
+				shoes={jordan07}
+			/>
+			<TwoProduct
+				title={"Jordan-06"}
+				shoes={jordan06}
+			/>
+			<ThreeProduct
+				title={"Jordan-05"}
+				shoes={jordan05}
+			/>
+			<ThreeProduct
+				title={"Jordan-01"}
+				shoes={jordan01}
+			/>
+			<FourProduct
+				title={"Hike-01"}
+				shoes={hike01}
+			/>
+			<ThreeProduct
+				title={"Glitter-01"}
+				shoes={glitter01}
+			/>
+			<FourProduct
+				title={"Ferrari-02"}
+				shoes={ferrari02}
+			/>
+			<ThreeProduct
+				title={"Ferrari-01"}
+				shoes={ferrari01}
+			/>
+			<ThreeProduct
+				title={"Fashion-05"}
+				shoes={fashion05}
+			/>
+			<ThreeProduct
+				title={"Fashion-04"}
+				shoes={fashion04}
+			/>
+			<ThreeProduct
+				title={"Fashion-03"}
+				shoes={fashion03}
+			/>
+			<div className={styles.banner}>
+				<h1>Fashion-02</h1>
+				<div className={styles.fashion02}>
+					<img
+						src={assets.lightshoesbanner}
+						alt=""
+					/>
+					<div>
+						<p>Fashion-02</p>
+						<p>White</p>
+					</div>
+				</div>
+			</div>
+			<FiveProducts
+				title={"Fashion-01"}
+				shoes={fashion01}
+			/>
+			<FourProduct
+				title={"BMW-02"}
+				shoes={BMW02}
+			/>{" "}
+			<ThreeProduct
+				title={"BMW-01"}
+				shoes={BMW01}
+			/>{" "}
+			<ThreeProduct
+				title={"Hello Kitty"}
+				shoes={hellokitty}
+			/>
+			<ThreeProduct
+				title={"Priyanka-01"}
+				shoes={priyanka01}
+			/> */}
+			<FourProduct
+				title={"Light-13"}
+				shoes={light13}
+			/>
+			<FourProduct
+				title={"Light-12"}
+				shoes={light12}
+			/>
+			<FourProduct
+				title={"Light-09"}
+				shoes={light09}
+			/>
+			<FourProduct
+				title={"Light-08"}
+				shoes={light08}
+			/>
+			<FourProduct
+				title={"Jugnu-07"}
+				shoes={jugnu07}
+			/>
+			<FourProduct
+				title={"Jugnu-06"}
+				shoes={jugnu06}
+			/>
+			<FourProduct
+				title={"Jugnu-05"}
+				shoes={jugnu05}
+			/>
+			<FourProduct
+				title={"Jugnu-04"}
+				shoes={jugnu04}
+			/>{" "}
+			<FourProduct
+				title={"Jugnu-03"}
+				shoes={jugnu03}
+			/>
+			<FourProduct
+				title={"Jugnu-02"}
+				shoes={jugnu02}
+			/>
+			<FourProduct
+				title={"Jugnu-01"}
+				shoes={jugnu01}
+			/>
+			<FourProduct
+				title={"Jordan-07"}
+				shoes={jordan07}
+			/>
+			<FourProduct
+				title={"Jordan-06"}
+				shoes={jordan06}
+			/>
+			<FourProduct
+				title={"Jordan-05"}
+				shoes={jordan05}
+			/>
+			<FourProduct
+				title={"Jordan-01"}
+				shoes={jordan01}
+			/>
+			<FourProduct
+				title={"Hike-01"}
+				shoes={hike01}
+			/>
+			<FourProduct
+				title={"Glitter-01"}
+				shoes={glitter01}
+			/>
+			<FourProduct
+				title={"Ferrari-02"}
+				shoes={ferrari02}
+			/>
+			<FourProduct
+				title={"Ferrari-01"}
+				shoes={ferrari01}
+			/>
+			<FourProduct
+				title={"Fashion-05"}
+				shoes={fashion05}
+			/>
+			<FourProduct
+				title={"Fashion-04"}
+				shoes={fashion04}
+			/>
+			<FourProduct
+				title={"Fashion-03"}
+				shoes={fashion03}
+			/>
+			<div className={styles.banner}>
+				<h1>Fashion-02</h1>
+				<div className={styles.fashion02}>
+					<img
+						src={assets.lightshoesbanner}
+						alt=""
+					/>
+					<div>
+						<p>Fashion-02</p>
+						<p>White</p>
+					</div>
+				</div>
+			</div>
+			<FourProduct
+				title={"Fashion-01"}
+				shoes={fashion01}
+			/>
+			<FourProduct
+				title={"BMW-02"}
+				shoes={BMW02}
+			/>{" "}
+			<FourProduct
+				title={"BMW-01"}
+				shoes={BMW01}
+			/>{" "}
+			<FourProduct
+				title={"Hello Kitty"}
+				shoes={hellokitty}
+			/>
+			<FourProduct
+				title={"Priyanka-01"}
+				shoes={priyanka01}
+			/>
+		</div>
+	)
+}
+
+export default LightShoes
