@@ -399,6 +399,7 @@ import React, { useEffect, useState, Suspense } from "react"
 import Select from "react-select"
 import { motion } from "framer-motion"
 import { assets } from "../../assets/assets"
+import { url } from "../../App"
 
 // Lazy load components
 const FourProduct = React.lazy(() =>
@@ -415,15 +416,15 @@ const Products = () => {
 	const navigate = useNavigate()
 	const location = useLocation()
 	const [categories, setCategories] = useState([])
+	const [loading, setLoading] = useState(true)
 
 	useEffect(() => {
 		const fetchCategories = async () => {
 			try {
-				const response = await fetch(
-					"http://localhost:5000/api/products/details"
-				)
+				const response = await fetch(`${url}/api/products/details`)
 				const data = await response.json()
 				setCategories(data.categories)
+				setLoading(false)
 				if (
 					location.pathname === "/product-range" &&
 					data.categories.length > 0
@@ -432,6 +433,7 @@ const Products = () => {
 				}
 			} catch (error) {
 				console.error("Failed to fetch categories:", error)
+				setLoading(false)
 			}
 		}
 
@@ -458,58 +460,66 @@ const Products = () => {
 					alt="Shoes banner"
 				/>
 			</header>
-			<nav className={styles.nav}>
-				{categories.map((category) => (
-					<React.Fragment key={category._id}>
-						<NavLink
-							to={category.name.toLowerCase().replace(/\s/g, "-")}
-							className={({ isActive }) => (isActive ? styles.active : "")}
-						>
-							{category.name}
-						</NavLink>
-						<hr />
-					</React.Fragment>
-				))}
-			</nav>
-			<div className={styles.navDropdown}>
-				<Select
-					options={options}
-					onChange={handleSelectChange}
-					placeholder="Menu"
-					className={styles.dropdownSelect}
-				/>
-			</div>
-			<main>
-				<Suspense
-					fallback={
-						<div className={styles.loadingContainer}>
-							<div className={styles.loader}></div>
-						</div>
-					}
-				>
-					<Routes>
+			{loading ? (
+				<div className={styles.loadingContainer}>
+					<div className={styles.loader}></div>
+				</div>
+			) : (
+				<>
+					<nav className={styles.nav}>
 						{categories.map((category) => (
-							<Route
-								key={category._id}
-								path={category.name.toLowerCase().replace(/\s/g, "-")}
-								element={
-									category.subcategories.length > 0 ? (
-										category.subcategories.map((subcategory) => (
-											<FourProduct
-												key={subcategory._id}
-												title={subcategory.name}
-												shoes={subcategory.products}
-											/>
-										))
-									) : (
-										<NoProducts />
-									)
-								}
-							/>
+							<React.Fragment key={category._id}>
+								<NavLink
+									to={category.name.toLowerCase().replace(/\s/g, "-")}
+									className={({ isActive }) => (isActive ? styles.active : "")}
+								>
+									{category.name}
+								</NavLink>
+								<hr />
+							</React.Fragment>
 						))}
-					</Routes>
-				</Suspense>
-			</main>
+					</nav>
+					<div className={styles.navDropdown}>
+						<Select
+							options={options}
+							onChange={handleSelectChange}
+							placeholder="Menu"
+							className={styles.dropdownSelect}
+						/>
+					</div>
+					<main>
+						<Suspense
+							fallback={
+								<div className={styles.loadingContainer}>
+									<div className={styles.loader}></div>
+								</div>
+							}
+						>
+							<Routes>
+								{categories.map((category) => (
+									<Route
+										key={category._id}
+										path={category.name.toLowerCase().replace(/\s/g, "-")}
+										element={
+											category.subcategories.length > 0 ? (
+												category.subcategories.map((subcategory) => (
+													<FourProduct
+														key={subcategory._id}
+														title={subcategory.name}
+														shoes={subcategory.products}
+													/>
+												))
+											) : (
+												<NoProducts />
+											)
+										}
+									/>
+								))}
+							</Routes>
+						</Suspense>
+					</main>
+				</>
+			)}
 		</div>
 	)
 }

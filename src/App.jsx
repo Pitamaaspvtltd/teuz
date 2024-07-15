@@ -6,11 +6,12 @@ import Contact from "./pages/contact/Contact"
 import About from "./pages/about/About"
 import { useContext, useEffect } from "react"
 import Products from "./pages/products/Products"
-import { CategoriesContext } from "./context/contex"
+// import { CategoriesContext } from "./context/contex"
+export const url = "https://teuzbackend.onrender.com"
 
 const App = () => {
 	const location = useLocation()
-	const categories = useContext(CategoriesContext)
+	// const categories = useContext(CategoriesContext)
 	useEffect(() => {
 		window.scrollTo(0, 0)
 	}, [location])
@@ -35,7 +36,7 @@ const App = () => {
 					path="/product-range"
 					element={<Navigate to="/product-range/light-shoes" />}
 				/> */}
-				{categories.length > 0 && (
+				{/* {categories.length > 0 && (
 					<Route
 						path="/product-range"
 						element={
@@ -46,7 +47,7 @@ const App = () => {
 							/>
 						}
 					/>
-				)}
+				)} */}
 				<Route
 					path="/contact-us"
 					element={<Contact />}
