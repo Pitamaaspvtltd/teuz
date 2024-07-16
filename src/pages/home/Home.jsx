@@ -85,7 +85,7 @@ const Home = () => {
 							src={assets.viewall}
 							alt="best Shoes"
 							className={styles.shoeGrid5}
-							onClick={() => navigate("/product-range/lightshoes")}
+							onClick={() => navigate("/product-range/light-shoes")}
 						/>
 					</div>
 				</div>

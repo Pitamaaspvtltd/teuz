@@ -54,9 +54,9 @@ const Nav = () => {
 					}}
 					className={styles.nav}
 				>
-					<div className={styles.header}>
+					{/* <div className={styles.header}>
 						<p>Navigation</p>
-					</div>
+					</div> */}
 					{navbar.map((data, index) => (
 						<Link
 							key={index}

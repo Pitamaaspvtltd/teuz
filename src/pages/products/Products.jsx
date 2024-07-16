@@ -483,7 +483,8 @@ const Products = () => {
 						<Select
 							options={options}
 							onChange={handleSelectChange}
-							placeholder="Menu"
+							defaultValue={options[0]}
+							placeholder={options[0]?.label || "Menu"}
 							className={styles.dropdownSelect}
 						/>
 					</div>
