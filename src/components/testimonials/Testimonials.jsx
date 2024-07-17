@@ -4,22 +4,26 @@ import "swiper/css"
 import "swiper/css/pagination"
 // import "swiper/css/navigation"
 import { Autoplay, Pagination, Navigation } from "swiper/modules"
+import { assets } from "../../assets/assets"
 
 const testimonials = [
 	{
-		title: "Reliable and High-Quality",
-		desc: "Teuz provides high-quality sandals and school shoes that are our best sellers. Their reliable supply chain keeps us well-stocked.",
-		author: "KidsKicks Warehouse",
+		title: "The Coolest Shoes Ever!",
+		desc: "I love my Teuz shoes because they make sounds when I walk. It's like I'm making music everywhere I go! All my friends want a pair too.",
+		author: "Aarav",
+		img: assets.reviewChild1,
 	},
 	{
-		title: "Reliable and High-Quality",
-		desc: "Teuz provides high-quality sandals and school shoes that are our best sellers. Their reliable supply chain keeps us well-stocked.",
-		author: "KidsKicks Warehouse",
+		title: "Super Comfortable for School!",
+		desc: "My school shoes from Teuz are so comfy! I can run and play without my feet hurting. Plus, they look really smart with my uniform.",
+		author: "Meera",
+		img: assets.reviewChild2,
 	},
 	{
-		title: "Reliable and High-Quality",
-		desc: "Teuz provides high-quality sandals and school shoes that are our best sellers. Their reliable supply chain keeps us well-stocked.",
-		author: "KidsKicks Warehouse",
+		title: "Perfect for Playing Outside!",
+		desc: "My Teuz sandals are the best for playing outside. They are really light and don’t make my feet sweaty. I wear them all the time!",
+		author: "Rohan",
+		img: assets.reviewChild3,
 	},
 ]
 
@@ -43,7 +47,11 @@ const Testimonials = () => {
 						slidesPerView: 1,
 						spaceBetween: 30,
 					},
-					1150: {
+					900: {
+						slidesPerView: 2,
+						spaceBetween: 30,
+					},
+					1290: {
 						slidesPerView: 3,
 						spaceBetween: 30,
 					},
@@ -55,54 +63,21 @@ const Testimonials = () => {
 				modules={[Autoplay, Pagination]}
 				className="mySwiper"
 			>
-				<SwiperSlide>
-					<div className={styles.testimonials}>
-						<div>
-							<h2>Reliable and High-Quality</h2>
-							<p>
-								Teuz provides high-quality sandals and school shoes that are our
-								best sellers. Their reliable supply chain keeps us well-stocked.
-							</p>
+				{testimonials.map((item, index) => (
+					<SwiperSlide className={styles.gapbetween}>
+						<div className={styles.testimonials}>
+							<img
+								src={item.img}
+								alt=""
+							/>
+							<div className={styles.content}>
+								<h2>{item.title}</h2>
+								<p>{item.desc}</p>
+								<h1>{item.author}</h1>
+							</div>
 						</div>
-						<h1>KidsKicks Warehouse</h1>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide>
-					<div className={styles.testimonials}>
-						<div>
-							<h2>Reliable and High-Quality</h2>
-							<p>
-								Teuz provides high-quality sandals and school shoes that are our
-								best sellers. Their reliable supply chain keeps us well-stocked.
-							</p>
-						</div>
-						<h1>KidsKicks Warehouse</h1>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide>
-					<div className={styles.testimonials}>
-						<div>
-							<h2>Reliable and High-Quality</h2>
-							<p>
-								Teuz provides high-quality sandals and school shoes that are our
-								best sellers. Their reliable supply chain keeps us well-stocked.
-							</p>
-						</div>
-						<h1>KidsKicks Warehouse</h1>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide>
-					<div className={styles.testimonials}>
-						<div>
-							<h2>Reliable and High-Quality</h2>
-							<p>
-								Teuz provides high-quality sandals and school shoes that are our
-								best sellers. Their reliable supply chain keeps us well-stocked.
-							</p>
-						</div>
-						<h1>KidsKicks Warehouse</h1>
-					</div>
-				</SwiperSlide>
+					</SwiperSlide>
+				))}
 			</Swiper>
 		</div>
 	)

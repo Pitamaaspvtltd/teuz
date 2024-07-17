@@ -14,6 +14,9 @@ import contactBg from "./contactbg.png"
 import aboutBg from "./aboutBg.png"
 import productPageBanner from "./productPageBanner.png"
 import lightshoesbanner from "./lightShoesbanner.png"
+import reviewChild1 from "./review1.png"
+import reviewChild2 from "./review2.png"
+import reviewChild3 from "./review3.png"
 
 export const assets = {
 	logo,
@@ -35,6 +38,9 @@ export const assets = {
 	shoesCollection23,
 	productPageBanner,
 	lightshoesbanner,
+	reviewChild1,
+	reviewChild2,
+	reviewChild3,
 }
 
 export const navbar = [
