@@ -51,9 +51,9 @@ const Contact = () => {
 							</div>
 							<div className={styles.row}>
 								<input
-									type="text"
+									type="tel"
 									name="phone"
-									placeholder="Phone No."
+									placeholder="Phone No"
 								/>
 							</div>
 							<div className={styles.row}>

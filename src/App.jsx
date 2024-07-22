@@ -11,10 +11,9 @@ export const url = "https://teuzbackend.onrender.com"
 
 const App = () => {
 	const location = useLocation()
-	// const categories = useContext(CategoriesContext)
-	useEffect(() => {
-		window.scrollTo(0, 0)
-	}, [location])
+	// useEffect(() => {
+	// 	window.scrollTo(0, 0)
+	// }, [location])
 
 	return (
 		<div>

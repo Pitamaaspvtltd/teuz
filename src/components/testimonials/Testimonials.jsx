@@ -15,7 +15,7 @@ const testimonials = [
 	},
 	{
 		title: "Super Comfortable for School!",
-		desc: "My school shoes from Teuz are so comfy! I can run and play without my feet hurting. Plus, they look really smart with my uniform.",
+		desc: "My shoes from Teuz are so comfy! I can run and play without my feet hurting. Plus, they look really smart with my uniform.",
 		author: "Meera",
 		img: assets.reviewChild2,
 	},

@@ -1,9 +1,17 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useLocation } from "react-router-dom"
+import { useEffect } from "react"
 import { assets, navbar } from "../../assets/assets"
 import styles from "./navbar.module.css"
 import { MediaNav2 } from "./mediaNav2"
 const Navbar = () => {
 	const navigate = useNavigate()
+	const location = useLocation()
+
+	const isNavbarLink = navbar.some((nav) => nav.href === location.pathname)
+	if (isNavbarLink) {
+		window.scrollTo(0, 0)
+	}
+
 	return (
 		<div className={styles.container}>
 			<img
